@@ -4,7 +4,7 @@ It is a quite simple method of solving an equation numerically in cases where th
 
 ![Newton-Raphson](https://wikimedia.org/api/rest_v1/media/math/render/svg/710c11b9ec4568d1cfff49b7c7d41e0a7829a736)
 
-I have used the equation  `x^2 - 612 = 0` as a demonstration. You can edit the source to use any equation of your choice. But remember the general rules for solving numerically using this method, especially this:
+I have used the equation  `x^2 - 612 = 0` as a demonstration. Incidentally, this equation also means you can use this method to find square root! You can edit the source to use any equation of your choice. But remember the general rules for solving numerically using this method, especially this:
   - poor initial guess value will lead to quick convergence and generally faulty estimates thereafter.
 
 `double` was used because `float` turned too imprecise for many calculations.
