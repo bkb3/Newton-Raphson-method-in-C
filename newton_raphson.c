@@ -17,19 +17,15 @@ double deriv(double x) {
 
 
 int main() {
-
 //    double x0 = 10,tol=0.00000001,x1,epsilon=1.0E-10;
-    float tol=0.00000001,epsilon=1.0E-10;
-    double x0 = 10, x1 = 0;
+    float tol=0.00000001;
+    double x0 = 10, x1 = 0 ,epsilon=1.0E-10;
     int max_iterations;
 
     double *values = malloc(20*sizeof(*values)); //allocate memory for max 20  values of x
     if(values == NULL) {
         printf("Out of memory error./n Exiting.../n");
     }
-
-
-//     y = malloc(max_iterations*sizeof(double));
 
     printf("Enter the values of  max iterations < 20.\n"); //because we allocated memory for max 20 values
     scanf("%d",&max_iterations);
@@ -41,9 +37,9 @@ int main() {
     printf("iteration\t x0\t\t x1\t\t func\t\t deriv\n");
     printf("---------\t -\t\t -\t\t -----\t\t --------\n");
 
-
+//Newton Ralphson formula
     for(int i = 0;i <= max_iterations;i++) {
-        x1 = x0 - func(x0)/deriv(x0); //Newton Ralphson formula
+        x1 = x0 - func(x0)/deriv(x0); 
         printf("%d\t\t %.8f\t %.8f\t %.8f\t %.8f\n",i,x0,x1,func(x0),deriv(x0));
             if(fabs(deriv(x0)) < epsilon) {
                 printf("We cannot divide by that small number!"); //to avoid division by zero
