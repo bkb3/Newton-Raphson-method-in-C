@@ -37,7 +37,7 @@ int main() {
     printf("iteration\t x0\t\t x1\t\t func\t\t deriv\n");
     printf("---------\t -\t\t -\t\t -----\t\t --------\n");
 
-//Newton Ralphson formula
+//Newton-Raphson formula
     for(int i = 0;i <= max_iterations;i++) {
         x1 = x0 - func(x0)/deriv(x0); 
         printf("%d\t\t %.8f\t %.8f\t %.8f\t %.8f\n",i,x0,x1,func(x0),deriv(x0));
