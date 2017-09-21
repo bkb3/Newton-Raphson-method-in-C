@@ -14,8 +14,6 @@ double deriv(double x) {
 }
 
 
-
-
 int main() {
 //    double x0 = 10,tol=0.00000001,x1,epsilon = 1.0E-10;
     float tol=0.00000001;
@@ -29,7 +27,7 @@ int main() {
 
     printf("Enter the values of  max iterations < 20.\n"); //because we allocated memory for max 20 values
     scanf("%d",&max_iterations);
-    if(max_iterations > 20) {
+    if(max_iterations >= 20) {
         printf("Entered value of max_iteration is greater than 20.\nPlease enter new value:");
         scanf("%d",&max_iterations);
     }
