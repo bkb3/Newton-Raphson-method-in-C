@@ -32,7 +32,7 @@ int main() {
         printf("Entered value of max_iteration is greater than 20.\nPlease enter new value: ");
         scanf("%d",&max_iterations);
         if(max_iterations >= 20);
-        printf("Value was >= 20. We will now exit.");
+        printf("Value was >= 20. We will now exit.\n");
         return 0;
     }
 
