@@ -17,11 +17,11 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 Here's my vim. Pretty comfy I tell you. I shall never have the privilige to use [2 GiB just to print a blinking cursor](https://github.com/Microsoft/vscode/issues/22900)  though!
-![vim_setup](https://imgoat.com/uploads/c8349cc726/44673.png)
+![vim_setup](https://imgoat.com/uploads/c8349cc726/44815.png)
 
 
 Here's the code running. The value obtained after 5 iterations can be verified with other sources too.
-![vim_running](https://imgoat.com/uploads/c8349cc726/44674.png)
+![vim_running](https://imgoat.com/uploads/c8349cc726/44814.png)
 
 
 # LICENSE
