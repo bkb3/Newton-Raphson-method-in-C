@@ -19,7 +19,7 @@ double deriv(double x) {
 int main() {
 //    double x0 = 10,tol=0.00000001,x1,epsilon = 1.0E-10;
     float tol=0.00000001;
-    double x0 = 10, x1 = 0 ,epsilon=1.0E-10;
+    double x0 = 10, x1 = 0, epsilon=1.0E-10;
     int max_iterations;
 
     double *values = malloc(20*sizeof(*values)); //allocate memory for max 20  values of x
