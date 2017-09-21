@@ -15,21 +15,25 @@ double deriv(double x) {
 
 
 int main() {
-//    double x0 = 10,tol=0.00000001,x1,epsilon = 1.0E-10;
-    float tol=0.00000001;
-    double x0 = 10, x1 = 0, epsilon=1.0E-10;
+//    double x0 = 10,tol = 0.00000001,x1,epsilon = 1.0E-10;
+    float tol = 0.00000001;
+    double x0 = 10, x1 = 0, epsilon = 1.0E-10; //x0 is our initial guess
     int max_iterations;
 
     double *values = malloc(20*sizeof(*values)); //allocate memory for max 20  values of x
     if(values == NULL) {
         printf("Out of memory error./n Exiting.../n");
+        return 0;
     }
 
     printf("Enter the values of  max iterations < 20.\n"); //because we allocated memory for max 20 values
     scanf("%d",&max_iterations);
     if(max_iterations >= 20) {
-        printf("Entered value of max_iteration is greater than 20.\nPlease enter new value:");
+        printf("Entered value of max_iteration is greater than 20.\nPlease enter new value: ");
         scanf("%d",&max_iterations);
+        if(max_iterations >= 20);
+        printf("Value was >= 20. We will now exit.");
+        return 0;
     }
 
     printf("iteration\t x0\t\t x1\t\t func\t\t deriv\n");
@@ -37,7 +41,7 @@ int main() {
 
 //Newton-Raphson formula
     for(int i = 0;i <= max_iterations;i++) {
-        x1 = x0 - func(x0)/deriv(x0); 
+        x1 = x0 - func(x0)/deriv(x0);
         printf("%d\t\t %.8f\t %.8f\t %.8f\t %.8f\n",i,x0,x1,func(x0),deriv(x0));
             if(fabs(deriv(x0)) < epsilon) {
                 printf("We cannot divide by that small number!"); //to avoid division by zero
@@ -52,7 +56,7 @@ int main() {
         printf("The solution after %d th iteration is %.10f.\n",max_iterations,x1);
         printf("%d th value is %.8f\n",max_iterations,values[max_iterations]);
         printf("%d th value is %.8f\n",max_iterations-1,values[max_iterations-1]);
-        printf("The possible error in estimation is %.8f\n",fabs(values[max_iterations]-values[max_iterations-1]));
+        printf("The possible error in estimation is %.8f\n",fabs(values[max_iterations]-values[max_iterations-1])); //just an indicative of imprecision in decimal places only. Don't take it too literally!
         printf("where as our tolerance is %.8f",tol);
     } else {
         printf("Failed to meet tolerance after given iterations. So the roots cannot be found!\nMaybe try more iterations?\n");
